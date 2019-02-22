@@ -15,11 +15,10 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
-from simpleportal.core.views import home, contact
+from simpleportal.core import urls
 
 
 urlpatterns = [
+    url(r'^', include('simpleportal.core.urls')),
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^$', home, name='home'),
-    url(r'^contact/$', contact, name='contact'),
 ]
