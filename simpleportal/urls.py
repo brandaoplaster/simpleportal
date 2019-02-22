@@ -21,5 +21,5 @@ from simpleportal.core.views import home, contact
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', home, name='home'),
-    url(r'^$', contact, name='contact'),
+    url(r'^contact/$', contact, name='contact'),
 ]
